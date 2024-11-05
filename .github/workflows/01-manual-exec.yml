@@ -1,19 +1,18 @@
 # CI de Nível 01 - Disparo manual a partir de 1 clique
 
-name: 'Execução Manual'
+name: "Execução Manual"
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
   e2e-tests:
-    runs-on: ['ubuntu-latest']
+    runs-on: ["ubuntu-latest"]
     steps:
-    
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Instalando dependências do projeto
-      run: npm install
+      - name: Instalando dependências do projeto
+        run: npm install
 
-    - name: Executando casos de teste
-      run: npm run headless:mode:all
+      - name: Executando casos de teste
+        run: npm run headless:mode:all
