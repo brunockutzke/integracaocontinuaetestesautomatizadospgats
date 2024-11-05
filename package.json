@@ -1,0 +1,20 @@
+{
+  "name": "automacao-web-pgats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "headless:mode:pom": "cypress run --headless --browser chrome --spec cypress/e2e/**/automation-exercise-with-pom.cy.js",
+    "headless:mode:without:pom": "cypress run --headless --browser chrome --spec cypress/e2e/**/automation-exercise.cy.js",
+    "headless:mode:all": "cypress run --headless --browser chrome --spec cypress/e2e/**/*.cy.js"
+  },
+  "keywords": [],
+  "author": "Bruno Corso Kutzke",
+  "license": "ISC",
+  "description": "Projeto de Automação Web da Pós-Graduação PGATS.",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.7.3",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
