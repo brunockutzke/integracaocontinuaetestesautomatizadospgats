@@ -16,3 +16,8 @@ jobs:
 
       - name: Executando casos de teste
         run: npm run headless:mode:all
+
+      - uses: actions/upload-artifact@v4
+        with: 
+          name: relatorio-tests
+          path: ./cypress/reports/html
